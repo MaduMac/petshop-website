@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <h1>PetShop</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">Home</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cadastro">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#agendamento">Agendamento</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="produtos" class="container mt-5">
+        <h2>Produtos</h2>
+        <div id="carouselProdutos" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselProdutos" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselProdutos" data-slide-to="1"></li>
+                <li data-target="#carouselProdutos" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="imagem-produto1.jpg" alt="Produto 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ração 1</h5>
+                        <p>Descrição do Produto 1</p>
+                        <p>R$ 50,00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="imagem-produto2.jpg" alt="Produto 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ração 2</h5>
+                        <p>Descrição do Produto 2</p>
+                        <p>R$ 75,00</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="imagem-produto3.jpg" alt="Produto 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ração 3</h5>
+                        <p>Descrição do Produto 3</p>
+                        <p>R$ 100,00</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselProdutos" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselProdutos" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="servicos" class="container mt-5">
+        <h2>Serviços</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Banho</h4>
+                <p>Descrição</p>
+                <p>R$ 100,00</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Tosa</h4>
+                <p>Descrição</p>
+                <p>R$ 150,00</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Hidratação</h4>
+                <p>Descrição</p>
+                <p>R$ 200,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cadastro" class="container mt-5">
+        <h2>Cadastro de Cliente e Pet</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nomeCliente">Nome</label>
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome do Cliente">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="emailCliente">E-mail</label>
+                    <input type="email" class="form-control" id="emailCliente" placeholder="E-mail do Cliente">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="enderecoCliente">Endereço</label>
+                    <input type="text" class="form-control" id="enderecoCliente" placeholder="Endereço">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefoneCliente">Telefone</label>
+                    <input type="tel" class="form-control" id="telefoneCliente" placeholder="Telefone">
+                </div>
+            </div>
+            <h4>Cadastro do Pet</h4>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nomePet">Nome do Pet</label>
+                    <input type="text" class="form-control" id="nomePet" placeholder="Nome do Pet">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tipoPet">Tipo</label>
+                    <input type="text" class="form-control" id="tipoPet" placeholder="Tipo (ex. Cachorro, Gato)">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="racaPet">Raça</label>
+                    <input type="text" class="form-control" id="racaPet" placeholder="Raça">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="temperamentoPet">Temperamento</label>
+                    <input type="text" class="form-control" id="temperamentoPet" placeholder="Temperamento">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </section>
+
+    <section id="agendamento" class="container mt-5">
+        <h2>Agendamento de Serviços</h2>
+        <form>
+            <div class="form-group">
+                <label for="servicoSelecionado">Escolha o Serviço</label>
+                <select class="form-control" id="servicoSelecionado">
+                    <option>Tosa</option>
+                    <option>Banho</option>
+                    <option>Hidratação</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dataAgendamento">Data</label>
+                <input type="date" class="form-control" id="dataAgendamento">
+            </div>
+            <div class="form-group">
+                <label for="horarioAgendamento">Horário</label>
+                <input type="time" class="form-control" id="horarioAgendamento">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="teleBusca">
+                <label class="form-check-label" for="teleBusca">Preferência para tele-busca</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Agendar</button>
+        </form>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 PetShop - Todos os direitos reservados.</p>
+        <p>Contato: contato@petshop.com</p>
+        <p><a href="#" class="text-white">Política de Privacidade</a> | <a href="#" class="text-white">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
